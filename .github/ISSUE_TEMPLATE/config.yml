@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Documentation
+    url: https://autolayoutpro.com/
+    about: Browse the AutoLayout PRO docs before filing an issue — many questions are answered there.
+  - name: Email (longer or private conversations)
+    url: mailto:salepaun@autolayoutpro.com
+    about: For NDA'd projects, source licensing, sponsored work, or anything you'd rather not file in public.

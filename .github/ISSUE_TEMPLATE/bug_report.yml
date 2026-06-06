@@ -1,0 +1,109 @@
+name: Bug report
+description: Report something that isn't working in AutoLayout PRO.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to file a bug. Please fill in as much detail as you can — it helps us reproduce and fix the issue faster.
+
+        💡 **Tip:** the fastest way to file a layout-related bug is to open Unity's
+        **`Window → AutoLayout PRO → Welcome`** and click **"Report a Bug"**.
+        That auto-fills the version, Unity version, platform, and a YAML dump of the
+        currently-selected layout — leaving you to describe the symptom.
+
+  - type: input
+    id: version
+    attributes:
+      label: AutoLayout PRO version
+      description: Which version are you running? Found in `Window → AutoLayout PRO → Welcome` (top-right) or `package.json`.
+      placeholder: "1.0.0"
+    validations:
+      required: true
+
+  - type: input
+    id: unity-version
+    attributes:
+      label: Unity version
+      placeholder: "6000.3.9f1"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      multiple: true
+      options:
+        - Editor (macOS)
+        - Editor (Windows)
+        - Editor (Linux)
+        - Standalone (macOS)
+        - Standalone (Windows)
+        - Standalone (Linux)
+        - iOS
+        - Android
+        - WebGL
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Clear description of the bug. Include any console errors verbatim.
+      placeholder: When I do X, Y happens. I expected Z.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      description: Numbered steps that consistently trigger the bug. A minimal repro project is gold.
+      placeholder: |
+        1. Create a Canvas with AutoLayout (Row)
+        2. Add two children with WidthFill
+        3. ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      placeholder: I expected ...
+    validations:
+      required: false
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots / video
+      description: Drag images or a short clip here if helpful.
+    validations:
+      required: false
+
+  - type: textarea
+    id: layout-yaml
+    attributes:
+      label: Layout YAML
+      description: |
+        Auto-filled by the in-editor **Report a Bug** button (Window → AutoLayout PRO → Welcome).
+        The dump now captures TMP / Image / native LayoutGroup / ContentSizeFitter / LayoutElement
+        config, Canvas root settings, AutoLayout-aware companions (Scroll View / Carousel /
+        Dropdown / List View / Grid View), and any non-AutoLayout child GameObjects in the
+        subtree — so it's usually enough on its own to reproduce. If filing manually, paste the
+        YAML dump here, or leave blank.
+      render: yaml
+    validations:
+      required: false
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Additional context
+      description: Anything else — assembly definitions, other UI plugins, custom scripts, scripting backend (Mono / IL2CPP), render pipeline.
+    validations:
+      required: false

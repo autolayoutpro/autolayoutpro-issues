@@ -1,0 +1,26 @@
+name: Feature request / idea
+description: Suggest a feature, an improvement, or just describe a problem you're hitting. No specific form required.
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Write whatever helps. One sentence is fine. A paragraph is fine. A wall of text is fine.
+
+        The only thing that really matters is that I can tell **what you're trying to build** and **where AutoLayout PRO got in your way** (or what's missing). No need to propose an API — just describe the situation in your own words.
+
+        Prefer email for longer / private conversations? `salepaun@autolayoutpro.com`.
+
+  - type: textarea
+    id: idea
+    attributes:
+      label: What's on your mind?
+      description: Use case, missing feature, rough idea, half-baked thought — all welcome.
+      placeholder: |
+        I'm building a settings menu with collapsible sections, and I'd love a built-in accordion component...
+
+        — or —
+
+        Could AutoLayout support [thing]? I'm not sure what the API should look like, but right now I work around it by [hack].
+    validations:
+      required: true
